@@ -1,0 +1,32 @@
+{% extends "twitterclone/layout.html" %}
+{% load static %}
+
+{% block body %}
+{% if user.is_authenticated %}
+
+	
+	<div id="title">
+		<h3>{{ username }}</h3>
+		{% if notmyself %}
+			<button class="btn btn-secondary" id="follow-button">{{ isfollow }}</button>
+		{% endif %}
+
+		<h4 id="followercount">{{ followercount }} followers</h4>
+		<h4>{{ followingcount }} following</h4>
+	</div>
+
+    <div id="posts-view"></div>
+    
+    <div id="pagination-view"></div>
+{% else %}
+	
+	<div>
+		Sign in to view posts.
+	</div>
+
+{% endif %}
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'twitterclone/user.js' %}"></script>
+{% endblock %}

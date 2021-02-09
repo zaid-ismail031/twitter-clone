@@ -1,0 +1,33 @@
+{% extends "twitterclone/layout.html" %}
+{% load static %}
+
+{% block body %}
+{% if user.is_authenticated %}
+	<div id="create-view">
+		<form id="create-post">
+			<textarea class="form-control" id="compose-post" placeholder="What's happening?"></textarea>
+			<button type="button" class="btn btn-primary" id="submit">Post</button>
+		</form>
+	</div>
+
+    <div id="title"><h4>Following</h4></div>
+
+    <div id="posts-view">
+
+    </div>
+
+
+    <div id="pagination-view">
+
+	</div>
+{% else %}
+	<div>
+		Sign in to view posts.
+	</div>
+
+{% endif %}
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'twitterclone/following.js' %}"></script>
+{% endblock %}
