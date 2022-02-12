@@ -27,7 +27,7 @@ class Post(models.Model):
         }
 
     def __str__(self):
-        return f"{self.user} post {self.id}"
+        return str(self.user) + " post " + str(self.id)
 
 
 class Like(models.Model):
@@ -35,7 +35,7 @@ class Like(models.Model):
     liked_posts = models.ManyToManyField(Post, blank=True, related_name="all_likes")
 
     def __str__(self):
-        return f"{self.user}'s likes"
+        return str(self.user) + " likes"
 
 
 class Follow(models.Model):
@@ -44,7 +44,7 @@ class Follow(models.Model):
     follows = models.IntegerField(default=0)
 
     def __str__(self):
-        return f"{self.user}'s follows"
+        return str(self.user) + " follows"
 
 
 
