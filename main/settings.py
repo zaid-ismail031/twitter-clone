@@ -25,7 +25,10 @@ SECRET_KEY = 'vxm47v$r=-awb&aaa84a4nwmicw=^d7gg5qw09l+7fb-&+1w!l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+		 '172.31.14.250',
+		 '54.212.21.178',
+]
 
 
 # Application definition
@@ -116,6 +119,7 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/prefix/'
+STATIC_ROOT = '/home/ubuntu/twitter-clone/public'
+

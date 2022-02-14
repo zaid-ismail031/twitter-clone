@@ -134,7 +134,8 @@ def create_post(request):
         return JsonResponse({"error": "POST request required"})
 
     # Get contents of post
-    data = json.loads(request.body)
+    body_unicode = request.body.decode('utf-8')
+    data = json.loads(body_unicode)
     content = data.get("content", "")
 
     # Initialize post object

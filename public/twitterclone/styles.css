@@ -1,0 +1,34 @@
+
+#posts-view {
+    margin: 15px;
+}
+
+#create-view {
+	margin: 15px;
+}
+
+#pagination-view {
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+}
+
+.page-item {
+	cursor: pointer;
+}
+
+button {
+	margin: 5px;
+}
+
+.container {
+	border-style: solid;
+	margin: 10px;
+}
+
+
+#title {
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
