@@ -32,3 +32,13 @@ button {
 	width: 50%;
 	padding: 10px;
 }
+
+#unauth-title {
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
+
+.navbar navbar-expand-lg navbar-light bg-light {
+    size: 100%
+}
