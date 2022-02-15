@@ -14,10 +14,10 @@ jobs:
         - name: AWS SSM Send Command
         uses: peterkimzz/aws-ssm-send-command@1.0.1
         with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID  }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY  }}
+        aws-access-key-id: ${{ secrets.AWS.AWS_ACCESS_KEY_ID  }}
+        aws-secret-access-key: ${{ secrets.AWS.AWS_SECRET_ACCESS_KEY  }}
         aws-region: us-west-2
-        instance-ids: ${{ secrets.INSTANCE_ID  }}
-        comment: Deploy the master branch
+        instance-ids: ${{ secrets.AWS.INSTANCE_ID  }}
+        comment: Deploy the main branch
         working-directory: /home/ubuntu/twitter-clone
         command: /bin/sh ./deploy.sh
