@@ -1,6 +1,11 @@
+*{
+    width: 100%;
+}
+
 
 #posts-view {
     margin: 15px;
+    width: 70%;
 }
 
 #create-view {
@@ -37,5 +42,9 @@ button {
 	margin: auto;
 	width: 50%;
 	padding: 10px;
+}
+
+.login-form {
+    padding: 50px;
 }
 
