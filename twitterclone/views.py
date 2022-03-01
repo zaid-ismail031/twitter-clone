@@ -247,13 +247,14 @@ def followposts(request, pagenumber):
 @login_required
 def userposts(request, pagenumber, username):
 
+    decoded_username = username.decode('utf-8')
     # Ensure that request method can only be "GET"
     if request.method != "GET":
         return JsonResponse({"error": "GET request required"})
 
     # Getting id associated with username
     try:
-        userid = User.objects.get(username=username).id
+        userid = User.objects.get(username=decoded_username).id
     except ObjectDoesNotExist:
         return JsonResponse({"error": "User does not exist"})
 
