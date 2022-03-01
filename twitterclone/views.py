@@ -248,6 +248,7 @@ def followposts(request, pagenumber):
 def userposts(request, pagenumber, username):
 
     decoded_username = username.decode('utf-8')
+    print(decoded_username)
     # Ensure that request method can only be "GET"
     if request.method != "GET":
         return JsonResponse({"error": "GET request required"})
