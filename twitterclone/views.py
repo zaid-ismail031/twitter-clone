@@ -374,7 +374,7 @@ def edit(request):
         return JsonResponse({"error": "POST request required"})
 
     # Get contents of post
-    data = json.loads(request.body)
+    data = json.loads(request.body.decode('utf-8'))
     postid = data.get("postid", "")
     content = data.get("content", "")
 
