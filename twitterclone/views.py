@@ -376,7 +376,6 @@ def edit(request):
     # Get contents of post
     body_unicode = request.body.decode('utf-8')
     data = json.loads(body_unicode)
-    return data
     postid = data.get("postid", "")
     content = data.get("content", "")
 
