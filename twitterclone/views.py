@@ -391,7 +391,7 @@ def edit(request):
 
 
 @csrf_exempt
-def flockApp(request):
+def flock(request):
     return JsonResponse({"message": "Success"}, status=200)
 
 
