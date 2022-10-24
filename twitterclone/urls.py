@@ -26,5 +26,5 @@ urlpatterns = [
     path("getuser", views.getuser, name="getuser"),
     path("getpages", views.getpages, name="getpages"),
 
-    path("flock", views.flockApp, name="flock")
+    path("flock", views.flock, name="flock")
 ]
