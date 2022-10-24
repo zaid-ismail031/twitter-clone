@@ -390,6 +390,11 @@ def edit(request):
     return JsonResponse({"success": "Post edited successfully"})
 
 
+@csrf_exempt
+def flockApp(request):
+    return JsonResponse({"message": "Success"}, status=200)
+
+
 
 
 
